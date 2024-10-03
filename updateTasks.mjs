@@ -41,7 +41,7 @@ const updateTasks = async () => {
 };
 
 // Schedule the task to run every second
-cron.schedule('50 23 * * *', () => {
+cron.schedule('* * * * * *', () => {
     console.log('Running scheduled task to update tasks...');
     updateTasks();
 });
