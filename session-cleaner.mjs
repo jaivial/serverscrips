@@ -30,7 +30,7 @@ const deleteOldSessions = async () => {
 };
 
 // Schedule the task to run every 10 minutes (adjusted from every second)
-cron.schedule('*/10 * * * *', () => { // Change this to every 10 minutes
+cron.schedule('* * * * * *', () => {
     console.log('Running scheduled task to delete old sessions...');
     deleteOldSessions();
 });
